@@ -8,9 +8,9 @@ from datetime import datetime, timedelta
 
 bot = telebot.TeleBot(config.token)
 
-@bot.message_handler(commands=['1'])
+@bot.message_handler(commands=['Бот здесь?'])
 def start(message):
-        bot.send_message(config.channel_name, 'Привет, мой создатель')
+        bot.send_message(config.channel_name, 'Я здесь')
 
 if __name__ == '__main__':
      bot.infinity_polling()
