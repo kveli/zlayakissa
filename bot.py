@@ -8,7 +8,7 @@ from datetime import datetime, timedelta
 
 bot = telebot.TeleBot(config.token)
 
-@bot.message_handler(commands=['Бот здесь?'])
+@bot.message_handler(commands=['test'])
 def start(message):
         bot.send_message(config.channel_name, 'Я здесь')
 
