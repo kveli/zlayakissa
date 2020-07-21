@@ -1,2 +1,10 @@
+certifi
+chardet
+idna
+pip
 pyTelegramBotAPI
+requests
 schedule
+setuptools
+six
+urllib3
