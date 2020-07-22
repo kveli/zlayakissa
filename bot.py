@@ -13,6 +13,7 @@ bot = telebot.TeleBot(config.token)
 def start(message):
         bot.send_message(config.channel_name, 'Я здесь')
 
+
 def rasp():
     f = open('events.txt')
     events = ''
@@ -32,7 +33,7 @@ def rasp():
         bot.send_message(config.channel_name, 'Через 30 минут начинается: '+events[0:len(events)-2]+'.')
     f.close()
 
-schedule.every(1).minutes.do(rasp)
+schedule.every(0.1).minutes.do(rasp)
 
 def potok_1():
     while True:
