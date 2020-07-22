@@ -29,7 +29,7 @@ def rasp():
         else:
             x = f.readline()
     if len(events) > 2:
-        bot.send_message(config.channel_name, 'Через 30 минут начинается: '+events[0:len(events)-2])
+        bot.send_message(config.channel_name, 'Через 30 минут начинается: '+events[0:len(events)-2]+'.')
     f.close()
 
 schedule.every(0.1).minutes.do(rasp)
