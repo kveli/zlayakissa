@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import config
 import telebot
 import datetime
@@ -13,18 +15,18 @@ bot = telebot.TeleBot(config.token)
 def start(message):
         bot.send_message(config.channel_name, 'Я здесь')
 
-
 def rasp():
-    f = open('events.txt')
+    f = open('events.txt', encoding="utf-8")
     events = ''
     x = f.readline() # 1-ая строка файла
     y = datetime.now() + timedelta(minutes=30) # Добавляем ко времени 30 минут
     time = y.strftime("%H:%M") # Формат Часы(24):Минуты
     while x != 'exit':
         if len(x) > 6:
-            if x[0:5] == time and str(datetime.today().isoweekday()) == x[6]:
+            if x[0:5] == time[0:5] and str(datetime.today().isoweekday()) == x[6]:
                 events = events+x[8:len(x)-1]+', '
                 x = f.readline()
+                print('1')
             else:
                 x = f.readline()
         else:
