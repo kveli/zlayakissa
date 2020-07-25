@@ -26,7 +26,7 @@ def rasp():
             if x[0:5] == time[0:5] and str(datetime.today().isoweekday()) == x[6]:
                 events = events+x[8:len(x)-1]+', '
                 x = f.readline()
-                print('1')
+                print(datetime.now())
             else:
                 x = f.readline()
         else:
