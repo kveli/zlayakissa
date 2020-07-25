@@ -1,5 +1,4 @@
 import os
 
-#token = os.environ.get('token-telegram')
-token = '1330647759:AAFzeP1ssOiMShqtGx1E8NohvwbvokPHFLc'
+token = os.environ.get('token-telegram')
 channel_name = '@zlaya12356'
